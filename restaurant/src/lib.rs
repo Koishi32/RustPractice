@@ -1,4 +1,4 @@
-///*
+/*
 mod back_of_house {
     pub struct Breakfast {
         pub toast: String,
@@ -14,14 +14,6 @@ mod back_of_house {
         }
     }
 }
-
-mod front_of_house {
-    pub mod hosting {
-        pub fn add_to_waitlist() {}
-    }
-}
-
-
 
 pub fn eat_at_restaurant() {
     // Order a breakfast in the summer with Rye toast
@@ -42,7 +34,7 @@ mod customer {
         hosting::add_to_waitlist();
     }
 }
-//*/
+*/
 //HOW TO DO WITHOUT THE PUBLIC FUNCTION (BOTH FIELDS OF STRUCT ARE PUBLIC)
 /*
 mod back_of_house {
@@ -75,3 +67,10 @@ pub fn eat_at_restaurant() {
     let order2 = back_of_house::Appetizer::Salad;
 }
 */
+mod front_of_house;
+
+pub use crate::front_of_house::hosting;
+
+pub fn eat_at_restaurant() {
+    hosting::add_to_waitlist();
+}
