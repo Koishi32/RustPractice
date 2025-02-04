@@ -67,6 +67,7 @@ pub fn eat_at_restaurant() {
     let order2 = back_of_house::Appetizer::Salad;
 }
 */
+
 mod front_of_house;
 
 pub use crate::front_of_house::hosting;

@@ -1,7 +1,7 @@
 pub fn string_examples(){
         println!("STRINGS EXAMPLE\n");
         assing_string();
-        handle_unico_for_strings();
+        handle_unique_for_strings();
         push_in_strings();
         concatenation_with_operator();
         print_string_format();
@@ -20,7 +20,7 @@ fn assing_string(){
         println!("{}",s);
     }
 
-fn handle_unico_for_strings(){
+fn handle_unique_for_strings(){
         let mut hello = String::from("السلام عليكم");
         let hello = String::from("Dobrý den");
         let hello = String::from("Hello");

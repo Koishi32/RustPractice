@@ -63,14 +63,15 @@ fn only_update_if_no_key_present(){
     println!("Org map: {scores:?}");
     scores.entry(String::from("Yellow")).or_insert(50);
     scores.entry(String::from("Blue")).or_insert(50);
-    println!("Map updated with entry\nif key was not present: {scores:?}");
+    println!("Map updated with entry if key was not present:");
     println!("{scores:?}");
 
 }
 
 fn update_based_on_existing_value(){
-    let text = "hello world wonderful world";
-
+    println!("HashMap updated based on existing value");
+    let text = "hello world wonderful wonderful hello hello  lol world";
+    println!("text with values: {}",text);
     let mut map = HashMap::new();
 
     for word in text.split_whitespace() {
