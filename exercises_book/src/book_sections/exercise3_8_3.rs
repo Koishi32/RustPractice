@@ -56,10 +56,10 @@ fn add_employee_to_department(map :&mut HashMap<String,String>){
 	let prev = map.insert(name.clone(),dep);
 	match prev{
 		Some(dep_prev) =>{
-			println!("Employee {:?} entry updated from {} to {:?}",name,dep_prev,map.get(&name));
+			println!("Employee {:?} entry updated from {} to {}",name,dep_prev,map.get(&name).unwrap());
 		},
 		None =>{
-			println!("New employee entry added: {:?} : {:?}",name,map.get(&name));
+			println!("New employee entry added: {:?} : {}",name,map.get(&name).unwrap());
 		},
 		
 	}
