@@ -109,3 +109,4 @@ use std::io::{self, Write};
 */
 //Using glob operator to bring all items defined in a path to your scope
 //use std::collections::*;
+fn main(){}

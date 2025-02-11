@@ -1,7 +1,5 @@
 use core::fmt;
-use std::{io::ErrorKind, num::IntErrorKind};
-use crate::generic_enums::fmt::Error;
-// Example of generic enumerator
+use std::{io::ErrorKind};// Example of generic enumerator
 // Some can hold a value of any type
 #[derive(Debug)]
 enum SecretOption<T> {
