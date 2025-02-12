@@ -1,17 +1,17 @@
-use aggregator::lib_default_impl::{self,Summary};
+use aggregator::default_impl::{self,Summary};
 
 pub fn example2(){
 
-    let article  = lib_default_impl::estruct_used::NewsArticle{
+    let article  = default_impl::estruct_used::NewsArticle{
         author :String::from("Dev") ,
         headline :String::from("Does nothing"),
         location : String::from("At Work"),
         content : String::from("The Dev won't work"),
     };
-    //println!("1 new Article:\n{}",aggregator::lib_default_impl::Summary::summarize(&article));
+    //Uses default implementation
     println!("1 new Article:\n{}",article.summarize());
     
-    let tweet = lib_default_impl::estruct_used::Tweet {
+    let tweet = default_impl::estruct_used::Tweet {
         username: String::from("weather station"),
         content: String::from(
             "Cloudy",
@@ -19,9 +19,14 @@ pub fn example2(){
         reply: false,
         retweet: false,
     };
-    //println!("1 new tweet:\n{}",aggregator::lib_default_impl::Summary::summarize(&tweet));
+    //Uses override implementation
     println!("1 new tweet:\n{}",tweet.summarize());
     
-    
-
+    let blog_post = default_impl::estruct_used::Blog{
+        tittle : String::from("The worst day of my life"),
+        sub_tittle : String::from("Update"),
+        content : String::from("So i got fired today"), 
+    };
+    //Uses default implementation
+    println!("1 new blog post:\n{}",blog_post.summarize());
 }

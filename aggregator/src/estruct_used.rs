@@ -10,3 +10,8 @@ pub struct Tweet {
     pub reply: bool,
     pub retweet: bool,
 }
+pub struct Blog{
+    pub tittle: String,
+    pub sub_tittle: String,
+    pub content: String,
+}

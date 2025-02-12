@@ -12,7 +12,6 @@ pub fn example3(){
     };
     //println!("1 new tweet:\n{}",aggregator::lib_default_impl::Summary::summarize(&tweet));
     println!("1 new tweet:\n{}",tweet.summarize());
-    
-    
-
+    //The method summarize_author() was called by the default implementation 
+    //of tweet
 }
