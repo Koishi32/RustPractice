@@ -5,7 +5,7 @@ impl Summary for estruct_used::Blog {}
 
 pub trait Summary {
     fn summarize(&self) -> String {
-        println!("This a default implementation of summary for NewsArticle");
+        println!("This a default implementation of summary for any valid type");
         String::from("(Read more...)")
     }
 }

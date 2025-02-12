@@ -4,3 +4,6 @@ pub mod default_impl;
 pub mod default_impl_methods;
 pub mod traits_as_parameters;
 pub mod trait_bound;
+pub mod trait_as_return_type;
+//pub mod trait_bound_where;
+pub mod trait_bounds_as_conditions;

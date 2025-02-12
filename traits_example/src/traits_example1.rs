@@ -1,25 +1,12 @@
-use aggregator::trait_impl::{self,Summary};
-
+use aggregator::trait_impl::Summary;
+use crate::estruct_data;
 pub fn example1(){
-    let tweet = trait_impl::estruct_used::Tweet {
-        username: String::from("horse_ebooks"),
-        content: String::from(
-            "of course, as you probably already know, people",
-        ),
-        reply: false,
-        retweet: false,
-    };
+    let tweet = estruct_data::simple_tweet();
+    println!("Tweet:\n{}",tweet.summarize());
 
-    //println!("1 new tweet:\n{}", aggregator::lib_default_impl::Summary::summarize(&tweet));
-    println!("1 new tweet:\n{}",tweet.summarize());
+    let article = estruct_data::simple_article();
+    println!("Article:\n{}",article.summarize());
 
-    let article  = trait_impl::estruct_used::NewsArticle{
-        author :String::from("Game_Dev") ,
-        headline :String::from("NPC Does nothing"),
-        location : String::from("At home"),
-        content : String::from("The Dev can't get his NPCs to do anything at the momment"),
-    };
-    //println!("1 new Article\n{}", aggregator::lib_trait_impl::Summary::summarize(&article));
-    println!("1 new article:\n{}",article.summarize());
-
+    let blog = estruct_data::simple_blog();
+    println!("Blog:\n{}",blog.summarize());
 }
