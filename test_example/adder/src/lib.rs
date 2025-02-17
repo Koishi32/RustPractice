@@ -13,8 +13,6 @@ impl Guess {
                 "Guess value must be less than or equal to 100, got {value}."
             );
         }
-
-
         Guess { value }
     }
 }
@@ -24,7 +22,11 @@ pub fn add(left: i32 , right: i32) -> i32 {
 }
 
 pub fn add_two(a: usize) -> usize {
-    a + 2
+    internal_adder(a, 2)
+}
+
+fn internal_adder(left: usize, right: usize) -> usize {
+    left + right
 }
 pub fn greeting(name: &str) -> String {
     /*
@@ -35,6 +37,10 @@ pub fn greeting(name: &str) -> String {
     s
 }
 
+fn prints_and_returns_10(a: i32) -> i32 {
+    println!("I got the value {a}");
+    10
+}
 
 #[derive(Debug)]
 struct Rectangle {
@@ -134,5 +140,57 @@ mod tests {
         } else {
             Err(String::from("two plus two does not equal four"))
         }
+    }
+
+    #[test]
+    fn this_test_will_pass() {
+        let value = prints_and_returns_10(4);
+        assert_eq!(value, 10);
+    }
+
+    #[test]
+    #[ignore]
+    fn this_test_will_fail() {
+        let value = prints_and_returns_10(8);
+        assert_eq!(value, 5);
+    }
+
+    #[test]
+    fn add_two_and_two() {
+        let result = add_two(2);
+        assert_eq!(result, 4);
+    }
+
+    #[test]
+    fn add_three_and_two() {
+        let result = add_two(3);
+        assert_eq!(result, 5);
+    }
+
+    #[test]
+    fn one_hundred() {
+        let result = add_two(100);
+        assert_eq!(result, 102);
+    }
+
+
+    #[test]
+    fn it_works() {
+        let result = add(2, 2);
+        assert_eq!(result, 4);
+    }
+
+    #[test]
+    #[ignore]
+    fn expensive_test() {
+        let result = add(5, 2);
+        assert_eq!(result, 7);
+        // code that takes an hour to run
+    }
+
+    #[test]
+    fn internal() {
+        let result = internal_adder(2, 2);
+        assert_eq!(result, 4);
     }
 }
