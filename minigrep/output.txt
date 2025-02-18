@@ -1,0 +1,10 @@
+Can use a fourth command or an environment value, the fourth command takes priority
+Y => case sensitive search
+N => case Insensitive search
+Option choosed: N
+Searching for: to
+In file: poem.txt
+Are you nobody, too?
+How dreary to be somebody!
+To tell your name the livelong day
+To an admiring bog!
