@@ -1,6 +1,6 @@
 mod example_closure_expensive;
 mod example_closure_reference;
-mod example_closure_traits;
+mod example_closure_fn_traits;
 #[derive(Debug, PartialEq, Copy, Clone)]
 enum ShirtColor {
     Red,
@@ -74,5 +74,7 @@ fn examples(){
     example_closure_reference::example2_borrowing_inmutable();
     example_closure_reference::example3_borrow_mutuble_reference();
     example_closure_reference::example4_closure_take_ownership();
-    example_closure_traits::example5();
+    example_closure_fn_traits::example5();
+    example_closure_fn_traits::example6();
+    example_closure_fn_traits::example7();
 }
