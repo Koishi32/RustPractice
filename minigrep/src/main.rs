@@ -3,13 +3,12 @@ use std::process;
 use minigrep::Config;
 fn main() {
     println!("Can use a fourth command or an environment value, the fourth command takes priority");
-    let args: Vec<String>=  env::args().collect();
+    //let args: Vec<String>=  env::args().collect();
     //let config =  Config::build(&args).unwrap();
-    let config = Config::build(&args).unwrap_or_else(|err|
-        {
-            eprintln!("Problem parsing arguments: {err}");
-            process::exit(1);
-        });
+    let config = Config::build(env::args()).unwrap_or_else(|err| {
+        eprintln!("Problem parsing arguments: {err}");
+        process::exit(1);
+    });
 
     println!("Searching for: {}", config.query);
     println!("In file: {}", config.file_path);
