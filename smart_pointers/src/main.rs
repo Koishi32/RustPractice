@@ -2,7 +2,7 @@ mod custom_smart_pointer;
 mod sp_drop_trait;
 mod multiple_ownership_rc;
 mod box_smart_pointer;
-
+mod cons_modification;
 fn main() {
     box_smart_pointer::smart_pointer_with_box();
     box_as_a_reference();
@@ -10,6 +10,7 @@ fn main() {
     sp_drop_trait::manual_drop();
     multiple_ownership_rc::rc_use_multiple_reference();
     multiple_ownership_rc::rc_dropping_increasing();
+    cons_modification::cons_mod();
 }
 
 
