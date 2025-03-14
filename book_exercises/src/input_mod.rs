@@ -14,6 +14,4 @@ pub fn wait_for_enter(){
     io::stdin()
     .read_line(&mut user_string)
     .expect("Failure To read line");
-    //let user_string=user_string.trim();
-    //user_string.to_string()
 }

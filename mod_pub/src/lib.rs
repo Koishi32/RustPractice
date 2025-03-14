@@ -1,4 +1,4 @@
-/*
+
 mod back_of_house {
     pub struct Breakfast {
         pub toast: String,
@@ -24,7 +24,7 @@ pub fn eat_at_restaurant() {
 
     // The next line won't compile if we uncomment it; we're not allowed
     // to see or modify the seasonal fruit that comes with the meal
-    //meal.seasonal_fruit = String::from("blueberries");
+    meal.seasonal_fruit = String::from("blueberries");
 }
 
 
@@ -34,7 +34,7 @@ mod customer {
         hosting::add_to_waitlist();
     }
 }
-*/
+
 //HOW TO DO WITHOUT THE PUBLIC FUNCTION (BOTH FIELDS OF STRUCT ARE PUBLIC)
 /*
 mod back_of_house {
