@@ -35,5 +35,6 @@ fn main() {
    //multiple_futures::control_runtime::bench_mark_test(); /// Spoiler yield wins!!!
    //custom_async_abstractions::custom_timeout::my_timeout();
    //futures_sequence::stream_creation::creating_stream();
-   futures_sequence::web_socket_protocol::web_socket();
+   //futures_sequence::web_socket_protocol::web_socket();
+   futures_sequence::merging_streams::main_merge();
 }
